@@ -14,16 +14,16 @@ public class LoginController {
     @FXML
     private PasswordField contrasena;
     @FXML
-    private Label text_error;
+    private Label text_error_log_in;
     @FXML
     private void validar_log_in() throws IOException {
         String user = usuario.getText();
         String pass = contrasena.getText();
 
         if (user.equals("admin") && pass.equals("admin")) {
-            App.setRoot("Registro");
+            App.setRoot("Menu");
         } else {
-            text_error.setText("Usuario o contraseña incorrectos");
+            text_error_log_in.setText("Usuario o contraseña incorrectos");
         }
     }
 }

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #f0f2f5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.CrearPromptController">
+   <children>
+      <VBox alignment="CENTER_LEFT" maxWidth="800.0" spacing="5.0">
+         <children>
+            <Label text="Configurar Nuevo Prompt" textFill="#1a1a1a">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label text="Define los detalles y el comportamiento de tu IA" textFill="#718096">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" top="30.0" />
+         </VBox.margin>
+      </VBox>
+
+      <VBox maxWidth="800.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox spacing="25.0">
+               <children>
+                  <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="TÍTULO" textFill="#4a5568">
+                           <font><Font name="System Bold" size="12.0" /></font>
+                        </Label>
+                        <TextField fx:id="nombrePrompt" prefHeight="45.0" promptText="Nombre identificativo" style="-fx-background-color: #edf2f7; -fx-background-radius: 8; -fx-border-width: 0; -fx-padding: 12;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="CATEGORÍA" textFill="#4a5568">
+                           <font><Font name="System Bold" size="12.0" /></font>
+                        </Label>
+                        <ComboBox fx:id="categoriaPrompt" prefHeight="45.0" prefWidth="300.0" promptText="Seleccionar..." style="-fx-background-color: #edf2f7; -fx-background-radius: 8; -fx-border-width: 0;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <VBox spacing="8.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="CONTENIDO DEL PROMPT" textFill="#4a5568">
+                     <font><Font name="System Bold" size="12.0" /></font>
+                  </Label>
+                  <TextArea fx:id="cuerpoPrompt" prefHeight="300.0" promptText="Escribe aquí el cuerpo del mensaje..." style="-fx-control-inner-background: #edf2f7; -fx-background-color: transparent; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-width: 0; -fx-padding: 5;" wrapText="true" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+
+            <HBox alignment="CENTER_RIGHT" spacing="15.0">
+               <children>
+                  <Button fx:id="btnCancelar"onAction="#cancelarPrompt" style="-fx-background-color: transparent; -fx-text-fill: #718096; -fx-cursor: hand; -fx-font-weight: bold;" text="Descartar" />
+                  <Button fx:id="btnAceptar" maxHeight="45.0" maxWidth="160.0" minHeight="45.0" minWidth="160.0" onAction="#guardarPrompt" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: #00b894; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand; -fx-background-insets: 0;" text="GUARDAR PROMPT">
+                     <font><Font size="13.0" /></font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets left="30.0" right="30.0" />
+   </padding>
+</VBox>

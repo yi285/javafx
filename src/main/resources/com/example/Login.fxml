@@ -23,11 +23,11 @@
 
       <TextField fx:id="usuario" maxWidth="250.0" promptText="Nombre de usuario" style="-fx-background-radius: 5; -fx-padding: 8;" />
 
-      <PasswordField fx:id="contraseña" maxWidth="250.0" promptText="Contraseña" style="-fx-background-radius: 5; -fx-padding: 8;" />
+      <PasswordField fx:id="contrasena" maxWidth="250.0" promptText="Contraseña" style="-fx-background-radius: 5; -fx-padding: 8;" />
 
       <Button fx:id="acceptar_log_in" mnemonicParsing="false" onAction="#validar_log_in" prefWidth="250.0" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 10; -fx-cursor: hand;" text="ENTRAR" />
       
-      <Label fx:id="text_error" textFill="#e53935" />
+      <Label fx:id="text_error_log_in" textFill="#e53935" />
    </children>
    <padding>
       <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
